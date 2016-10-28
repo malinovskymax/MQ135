@@ -36,7 +36,12 @@ MQ135::MQ135(uint8_t pin) {
 /**************************************************************************/
 float MQ135::getResistance() {
   int val = analogRead(_pin);
-  return ((1024./(float)val) * 5. - 1.)*RLOAD;
+  /*
+  * Values from @lorf
+  * r = ((1023. * _rload * _vc) / ((float)val * _vref)) - _rload;
+  *
+  */
+  return ((1023. * RLOAD * 5)/((float)val * 5)) - RLOAD;
 }
 /**************************************************************************/
 /*!
