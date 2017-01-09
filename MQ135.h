@@ -73,12 +73,16 @@ v1.0 - First release
 /// Atmospheric Acetone level for calibration purposes
 #define atmAcetone 16
 
+
 class MQ135 {
  private:
   const uint8_t _pin;
 
  public:
   MQ135(uint8_t pin);
+
+  void begin();
+
   float getResistance() const;
   
   float getCOPPM() const;

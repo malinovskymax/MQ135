@@ -26,6 +26,17 @@ v1.0 - First release
 
 MQ135::MQ135(uint8_t pin) : _pin(pin){
 }
+
+
+/**************************************************************************/
+/*!
+@brief  Set up the pins!
+*/
+/**************************************************************************/
+void MQ135::begin()
+{ 
+  pinMode(_pin, INPUT);
+}
 /**************************************************************************/
 /*!
 @brief  Get the resistance of the sensor, ie. the measurement value
@@ -40,7 +51,7 @@ float MQ135::getResistance() const {
   * r = ((1023. * _rload * _vc) / ((float)val * _vref)) - _rload;
   *
   */
-  return ((1023. * RLOAD * 5)/((float)val * 5)) - RLOAD;
+  return ((1023. * RLOAD * 5.)/((float)val * 5.)) - RLOAD;
 }
 /**************************************************************************/
 /*!
