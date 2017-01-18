@@ -73,52 +73,56 @@ v1.0 - First release
 /// Atmospheric Acetone level for calibration purposes
 #define atmAcetone 16
 
+
 class MQ135 {
  private:
-  uint8_t _pin;
+  const uint8_t _pin;
 
  public:
   MQ135(uint8_t pin);
-  float getResistance();
+
+  void begin();
+
+  float getResistance() const;
   
-  float getCOPPM();
-  float getCO2PPM();
-  float getEthanolPPM();
-  float getNH4PPM();
-  float getToluenePPM();
-  float getAcetonePPM();
+  float getCOPPM() const;
+  float getCO2PPM() const;
+  float getEthanolPPM() const;
+  float getNH4PPM() const;
+  float getToluenePPM() const;
+  float getAcetonePPM() const;
   
-  float getRZeroCO();
-  float getRZeroCO2();
-  float getRZeroEthanol();
-  float getRZeroNH4();
-  float getRZeroToluene();
-  float getRZeroAcetone();
+  float getRZeroCO() const;
+  float getRZeroCO2() const;
+  float getRZeroEthanol() const;
+  float getRZeroNH4() const;
+  float getRZeroToluene() const;
+  float getRZeroAcetone() const;
   
-  float getCO(float res);
-  float getCO2(float res);
-  float getEthanol(float res);
-  float getNH4(float res);
-  float getToluene(float res);
-  float getAcetone(float res);
+  float getCO(float res) const;
+  float getCO2(float res) const;
+  float getEthanol(float res) const;
+  float getNH4(float res) const;
+  float getToluene(float res) const;
+  float getAcetone(float res) const;
   
   
-  float getCorrectedRZero(float r);
-  float getCorrectedRZeroCO(float r);
-  float getCorrectedRZeroEthanol(float r);
-  float getCorrectedRZeroNH4(float r);
-  float getCorrectedRZeroToluene(float r);
-  float getCorrectedRZeroAcetone(float r);
+  float getCorrectedRZero(float r) const;
+  float getCorrectedRZeroCO(float r) const;
+  float getCorrectedRZeroEthanol(float r) const;
+  float getCorrectedRZeroNH4(float r) const;
+  float getCorrectedRZeroToluene(float r) const;
+  float getCorrectedRZeroAcetone(float r) const;
   
-  float getCorrectedResistance(float t, float h);
-  float getCorrectionFactor(float t, float h);
+  float getCorrectedResistance(float t, float h) const;
+  float getCorrectionFactor(float t, float h) const;
   
-  float getCalibratedCO2(float t, float h);
-  float getCalibratedCO(float t, float h);
-  float getCalibratedEthanol(float t, float h);
-  float getCalibratedNH4(float t, float h);
-  float getCalibratedToluene(float t, float h);
-  float getCalibratedAcetone(float t, float h);
+  float getCalibratedCO2(float t, float h) const;
+  float getCalibratedCO(float t, float h) const;
+  float getCalibratedEthanol(float t, float h) const;
+  float getCalibratedNH4(float t, float h) const;
+  float getCalibratedToluene(float t, float h) const;
+  float getCalibratedAcetone(float t, float h) const;
 
 
 };
