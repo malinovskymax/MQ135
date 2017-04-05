@@ -26,17 +26,17 @@ v1.0 - First release
 /// R0 for AIR
 #define r0Air 1
 /// R0 for CO **measured with 24hrs of exposure**
-#define r0CO 69.65
+#define r0CO 7.41235
 /// R0 for CO2 **realized 24 hrs of exposure**
-#define r0CO2 553.232
+#define r0CO2 61.10364
 /// R0 for Ethanol **measured with 24hrs of exposure**
-#define r0Ethanol 240.293
+#define r0Ethanol 26.35573
 /// R0 for Ammonium **measured with 24hrs of exposure**
-#define r0NH4 164.8282
+#define r0NH4 18.4409
 /// R0 for Toluene **measured with 24hrs of exposure**
-#define r0Toluene 130.726
+#define r0Toluene 17.39102
 /// R0 for Acetone **measured with 24hrs of exposure**
-#define r0Acetone 224.6261
+#define r0Acetone 31.29273
 /// Parameters Equation for CO
 #define scaleFactorCO 662.9382
 #define exponentCO 4.0241
